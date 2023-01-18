@@ -4,7 +4,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "subtask_table")
-data class SubTask(
+data class GSubTask(
     @PrimaryKey(autoGenerate = true)
     val subtask_id: Int,
     val task_id: Int,
