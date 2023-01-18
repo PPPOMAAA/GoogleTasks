@@ -12,4 +12,12 @@ class SubtaskRepository (private val subtaskDao : GSubTaskDao) {
     suspend fun addSubtask(subtask: GSubTask) {
         subtaskDao.addSubtask(subtask)
     }
+
+    suspend fun deleteSubtask(subtask: GSubTask) {
+        subtaskDao.deleteSubtask(subtask)
+    }
+
+    suspend fun updateSubtask(subtask: GSubTask) {
+        subtaskDao.updateSubtask(subtask)
+    }
 }

@@ -24,4 +24,16 @@ class SubtaskViewModel(application: Application) : AndroidViewModel(application)
             repository.addSubtask(subtask)
         }
     }
+
+    fun deleteSubtask(subtask: GSubTask) {
+        viewModelScope.launch(Dispatchers.IO){
+            repository.deleteSubtask(subtask)
+        }
+    }
+
+    fun updateSubtask(subtask: GSubTask){
+        viewModelScope.launch(Dispatchers.IO){
+            repository.updateSubtask(subtask)
+        }
+    }
 }

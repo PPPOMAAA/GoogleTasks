@@ -12,4 +12,12 @@ class TaskRepository (private val taskDao : GTaskDao) {
     suspend fun addTask(task: GTask){
         taskDao.addTask(task)
     }
+
+    suspend fun updateTask(task: GTask){
+        taskDao.updateTask(task)
+    }
+
+    suspend fun deleteTask(task: GTask){
+        taskDao.deleteTask(task)
+    }
 }
