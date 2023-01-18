@@ -5,16 +5,17 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.example.googletasks.dao.GListDao
+import com.example.googletasks.dao.GSubTaskDao
 import com.example.googletasks.dao.GTaskDao
 import com.example.googletasks.data.GList
 import com.example.googletasks.data.GSubTask
 import com.example.googletasks.data.GTask
 
-@Database(entities = [GList::class, GTask::class, GSubTask::class], version = 1, exportSchema = false)
+@Database(entities = [GList::class, GTask::class, GSubTask::class], version = 10, exportSchema = false)
 abstract class TaskDatabase : RoomDatabase() {
     abstract fun listDao() : GListDao
     abstract fun taskDao() : GTaskDao
-    abstract fun subtaskDao() : GSubTask
+    abstract fun subtaskDao() : GSubTaskDao
 
     companion object {
         @Volatile
